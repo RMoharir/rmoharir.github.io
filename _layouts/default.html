@@ -45,8 +45,8 @@
               </p>
               <p style="text-align:center">
                 <a target="_blank" href="rmoharir@cs.cmu.edu"> Email</a> &nbsp;/&nbsp;
-                <a href="data/Moharir__Rutika_CMU_MSCV.pdf"> Resume </a>                 
-                <a href="https://www.linkedin.com/in/rutika-moharir-498a28143"> LinkedIn </a>                
+                <a href="data/Moharir__Rutika_CMU_MSCV.pdf"> Resume </a> &nbsp;/&nbsp;                
+                <a href="https://www.linkedin.com/in/rutika-moharir-498a28143"> LinkedIn </a> &nbsp;/&nbsp;              
                 <a href="https://github.com/RMoharir">GitHub</a> &nbsp;/&nbsp;
                 <a href="https://scholar.google.com/citations?user=jK6hHlcAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
 
@@ -70,7 +70,7 @@
             </td>
 
             <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-              <a href="https://research.samsung.com/sri-b"><img src = "images/samsung-logo.png" width="90%"></a>
+              <a href="https://research.samsung.com/sri-b"><img src = "images/samsung-logo.jpeg" width="90%"></a>
             </td>
 
             <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
@@ -81,92 +81,109 @@
             
         </tbody</table>
 
-        <br><br>
-        <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tbody>
+        <br>
+        <br>
+
+        <!--Research-->
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-
-              <div class="col-md-7">
-                <heading>Education</heading>
-                <ul class="ul-edu fa-ul">
-                  
-                  <li>
-                    <i class="fa-li fas fa-graduation-cap"></i>
-                    <div class="description">
-                      <p><em>M.S in Computer Vision, 2023</em> <br> Carnegie Mellon University, USA</p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <i class="fa-li fas fa-graduation-cap"></i>
-                    <div class="description">
-                      <p><em>B.Tech in Computer Science, 2019</em> <br> IIT Dhanbad, India</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research</heading>
               <p>
-                I'm interested in 3D Vision algorithms for Mixed Reality.
+                I am interesting in 3D Vision algorithms for Mixed Reality.
               </p>
             </td>
           </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+          <tr onmouseout="ddp_stop()" onmouseover="ddp_start()">
+            <td style="padding:20px;width:30%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='ddp_image'>
+                  <img src='images/lipsow_teaser.png' width="200"></div>
+                <img src='images/lipsow_teaser.png' width="200">
+              </div>
+              <script type="text/javascript">
+                function ddp_start() {
+                  document.getElementById('ddp_image').style.opacity = "1";
+                }
+        
+                function ddp_stop() {
+                  document.getElementById('ddp_image').style.opacity = "0";
+                }
+                ddp_stop()
+              </script>
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="">
+                <papertitle>Lidar Panoptic Segmentation in an Open World</papertitle>
+              </a>
               <br>
-              {{post.authors}}
-
+              <strong>Anirudh Chakravarthy*</strong>,
+              <a href="https://g-meghana-reddy.github.io">Meghana Reddy Ganesina*</a>,
+              <a href="https://peiyunh.github.io">Peiyun Hu</a>, 
+              <a href="https://dvl.in.tum.de/team/lealtaixe/">Laura Leal-Taixé</a>, 
+              <a href="https://aimerykong.github.io/">Shu Kong</a>, 
+              <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>, 
+              <a href="https://aljosaosep.github.io">Aljosa Osep</a>
               <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <em>Under Review</em>, 2022
               <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
+              <a href="https://mscvprojects.ri.cmu.edu/2022team1/">[project page]</a>
+              
               <p></p>
-              {{ post.excerpt }}
+              <p>
+              We introduce a new problem setting, Lidar Panoptic Segmentation in an Open World (LiPSOW). We also establish evaluation protocols to evaluate methods under LiPSOW. We propose our method, Hierarchical LiDAR Panoptic Segmentation (HLPS), which combines geometric clustering and lidar semantic segmentation to achieve strong performance on LiPSOW.
+            </p>
+          </td>
+        </tr>
+    </tbody></table>
+
+          <!-- PROJECTS -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Projects</heading>
             </td>
           </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <tr onmouseout="ddp_stop()" onmouseover="ddp_start()">
+          <td style="padding:20px;width:30%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='ddp_image'>
+                <img src='images/mvo_fusion_teaser.png' width="200"></div>
+              <img src='images/mvo_fusion_teaser.png' width="200">
+            </div>
+            <script type="text/javascript">
+              function ddp_start() {
+                document.getElementById('ddp_image').style.opacity = "1";
+              }
+
+              function ddp_stop() {
+                document.getElementById('ddp_image').style.opacity = "0";
+              }
+              ddp_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>Is Monocular Vision Sufficient for Multi-View Visual Odometry?</papertitle>
+              <br>
+              <a href="files/MVO Fusion.pdf">[pdf]</a>
+              <a href="https://github.com/neha-boloor/MVO-fusion">[code]</a>
+            <p></p>
+            <p>
+              For visual localization, we often have multiple cameras mounted onto a robot which can be used to infer odometry (known as multi-view visual odometry).
+              Existing works either heavily rely on the scene geometry or use complicated networks posing challenges for real-world generalization.
+              In this work, we aim to develop simple yet strong baselines for multi-view visual odometry, by fusing estimates using monocular visual odometry.
+          </p>
+        </td>
+        </tr>
+        </tbody></table>
+
         <br>
         <br>
         <br>
