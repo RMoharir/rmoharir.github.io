@@ -57,19 +57,19 @@
           </tbody>
             <tr>
               <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <a href="https://www.apple.com/"><img src = "images/apple-logo-transparent.png" width="50%"></a>
+                <a href="https://www.apple.com/"><img src = "images/apple-logo-transparent.png" width="70%"></a>
               </td>
     
               <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <a href="https://www.ri.cmu.edu/"><img src = images/CMU-logo.png width="50%"></a>
+                <a href="https://www.ri.cmu.edu/"><img src = images/CMU-logo.png width="70%"></a>
               </td>
     
               <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <a href="https://research.samsung.com/sri-b"><img src = "images/samsung-logo.jpeg" width="50%"></a>
+                <a href="https://research.samsung.com/sri-b"><img src = "images/samsung-logo.jpeg" width="70%"></a>
               </td>
     
               <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <a href="https://www.iitism.ac.in/"><img src = "images/IIT-Dhanbad-logo.jpeg" width="50%"></a>
+                <a href="https://www.iitism.ac.in/"><img src = "images/IIT-Dhanbad-logo.jpeg" width="70%"></a>
               </td>            
             </tr>
             
@@ -153,8 +153,8 @@
           <td style="padding:20px;width:30%;vertical-align:middle">
             <div class="one">
               <div class="two" id='ddp_image'>
-                <img src='images/monodepth_relpose.png' width="200"></div>
-              <img src='images/monodepth_relpose.png' width="200">
+                <img src='images/hand-puppets.gif' width="200"></div>
+              <img src='images/hand-puppets.gif' width="200">
             </div>
             <script type="text/javascript">
               function ddp_start() {
@@ -168,14 +168,15 @@
             </script>
           </td>
           <td style="padding:20px;width:75%;vertical-align:middle">
-              <papertitle>Self-Supervised Camera Pose Estimation with Geometric Consistency</papertitle>
+              <papertitle>Hand Puppets: 3D Hand Pose Prediction from Shadow Puppet Images</papertitle>
               <br>
-              <a href="files/Monodepth+RelPose.pdf">[pdf]</a>
-              <a href="https://github.com/vanshajc/self-supervised-relpose">[code]</a>
+              <a href="pdfs/HandPuppetsPoster.pdf">[poster]</a>
+              <a href="pdfs/HandPuppetsPresentation.pptx">[presentation]</a>
+              <a href="pdfs/HandPuppetsPaper.pdf">[pdf]</a>
+              <a href="https://github.com/RMoharir/Hand-Puppets">[code]</a>
             <p></p>
             <p>
-              Existing camera pose estimation methods make use of ground-truth odometry as supervision, which may be expensive to obtain.
-              In this work, we train a transformer-based pose estimation network in a self-supervised manner, leveraging advances in monocular depth estimation.
+              Developed a ResNet based network to regress MANO model parameters for 3D two hand pose estimation from a single shadow puppet image.Used optimization to model sequence of hand pose transformations from rest pose to the final pose. Additionally, implemented geometric based losses to regularize the hand pose estimation model.monocular depth estimation.
             </p>
           </td>
         </tr>
@@ -190,7 +191,92 @@
       <tbody>
         <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading>PUBLICATIONS</heading>
+            <heading>Publications</heading>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr onmouseout="ddp_stop()" onmouseover="ddp_start()">
+        <td style="padding:20px;width:30%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='ddp_image'>
+              <img src='images/telcos_arch.jpeg' width="200"></div>
+            <img src='images/telcos_arch.jpeg' width="200">
+          </div>
+          <script type="text/javascript">
+            function ddp_start() {
+              document.getElementById('ddp_image').style.opacity = "1";
+            }
+
+            function ddp_stop() {
+              document.getElementById('ddp_image').style.opacity = "0";
+            }
+            ddp_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://ieeexplore.ieee.org/document/9533292">
+            <papertitle>TeLCoS:OnDeviceTextLocalizationwithClusteringofScript</papertitle>
+          </a>
+          <br>
+          <em>2021 International Joint Conference on Neural Networks (IJCNN) Shenzhen, China</em>, 2021
+          <br>
+          <a href="https://ieeexplore.ieee.org/document/9533292">[pdf]</a>
+          
+          <p></p>
+          <p>
+            We propose a multi-task dual branch lightweight CNN network that performs real-time on device Text Localization and High-level Script Clustering simultaneously. We also introduce a novel structural similarity based channel pruning mechanism to build an efficient network with only 1.15M parameters.
+        </p>
+        </td>
+        </tr>
+
+        <tr onmouseout="ddp_stop()" onmouseover="ddp_start()">
+          <td style="padding:20px;width:30%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='ddp_image'>
+                <img src='images/mrscatt_network.png' width="200"></div>
+              <img src='images/mrscatt_network.png' width="200">
+            </div>
+            <script type="text/javascript">
+              function ddp_start() {
+                document.getElementById('ddp_image').style.opacity = "1";
+              }
+  
+              function ddp_stop() {
+                document.getElementById('ddp_image').style.opacity = "0";
+              }
+              ddp_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/abs/2112.00448?context=cs">
+              <papertitle>On-Device Spatial Atention based Sequence Learning Approach for SceneText Script Identification</papertitle>
+            </a>
+            <br>
+            <em>6th IAPR International Conference on Computer Vision & Image Processing</em>, 2021
+            <br>
+            <a href="https://arxiv.org/abs/2112.00448?context=cs">[pdf]</a>
+            
+            <p></p>
+            <p>
+              We propose a CNN, equipped with a spatial attention module which helps reduce the spatial distortions present in natural images which in turn allows the feature extractor to generate rich image representations while ignoring the deformities. The CNN learns the text feature representation by identifying each character as belonging to a particular script and the long term spatial dependencies within the text are captured using the sequence learning capabilities of the LSTM layers. 
+          </p>
+          </td>
+          </tr>
+
+      </tbody>
+    </table>
+				
+    <!-- PATENTS -->
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading>Patents</heading>
           </td>
         </tr>
       </tbody>
@@ -217,29 +303,24 @@
           </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://openaccess.thecvf.com/content/CVPR2021W/AI4Space/papers/Chakravarthy_MRSCAtt_A_Spatio-Channel_Attention-Guided_Network_for_Mars_Rover_Image_Classification_CVPRW_2021_paper.pdf">
-            <papertitle>MRSCAtt: A Spatio-Channel Attention-Guided Network for Mars Rover Image Classification</papertitle>
+          <a href="https://patents.google.com/patent/US20220343663A1/en">
+            <papertitle>Methods and systems for performing on-device image to text conversion</papertitle>
           </a>
           <br>
-          <strong>Anirudh Chakravarthy*</strong>,
-          <a href="https://www.linkedin.com/in/rroshanroy/">Roshan Roy*</a>,
-          <a href="https://www.linkedin.com/in/praveen-ravirathinam/">Praveen Ravirathinam*</a>
+          <em>(US Patent App. 17/859,629)</em>
           <br>
-          <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops</em>, 2021
-          <br>
-          <a href="https://openaccess.thecvf.com/content/CVPR2021W/AI4Space/papers/Chakravarthy_MRSCAtt_A_Spatio-Channel_Attention-Guided_Network_for_Mars_Rover_Image_Classification_CVPRW_2021_paper.pdf">[pdf]</a>
-          <a href="https://github.com/anirudh-chakravarthy/MRSCAtt">[code]</a>
+          <a href="https://patents.google.com/patent/US20220343663A1/en">[pdf]</a>
           
           <p></p>
           <p>
-            We propose a network, MRSCAtt (Mars Rover Spatial and Channel Attention), which jointly uses spatial and channel attention to accurately classify images. We use images taken by NASA's Curiosity rover on Mars as a dataset to show the superiority of our approach by achieving state-of-the-art results with 81.53% test set accuracy on the MSL Surface Dataset, outperforming other methods. 
+           A method for performing on-device image to text conversion which includes image language detection, understanding the text and using contextual and localized lexicon set for post optical character recognition (OCR) correction.
+
         </p>
-          
         </td>
         </tr>
       </tbody>
     </table>
-				
+
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tbody>
         <tr>
